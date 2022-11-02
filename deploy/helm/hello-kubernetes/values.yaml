@@ -1,5 +1,5 @@
 # Provide a custom message
-message: "Msys Technologies Argo CD Demo project"
+message: "Msys Technologies Argo CD Demo project_v1"
 
 # Remember to set service.type=ClusterIP if you are using an ingress
 ingress:
