@@ -14,9 +14,8 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      CONTAINER_REGISTRY: docker.io
-      CONTAINER_IMAGE: paulbouwer/hello-kubernetes
-
+      CONTAINER_REGISTRY: https://267767410086.dkr.ecr.us-east-1.amazonaws.com/jenkins_pipeline
+      CONTAINER_IMAGE: jenkins_pipeline
     steps:
 
       - name: Checkout code
