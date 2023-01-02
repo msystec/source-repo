@@ -15,7 +15,7 @@ jobs:
 
     env:
       CONTAINER_REGISTRY: docker.io
-      CONTAINER_IMAGE: jenkins_pipeline
+      CONTAINER_IMAGE: jenkins_pipeline/hello-kubernetes
     steps:
 
       - name: Checkout code
