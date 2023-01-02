@@ -15,7 +15,7 @@ deployment:
   replicaCount: 3
   container:
     image:
-      repository: "https://267767410086.dkr.ecr.us-east-1.amazonaws.com/jenkins_pipeline"
+      repository: "267767410086.dkr.ecr.us-east-1.amazonaws.com/jenkins_pipeline"
       tag: "latest" # uses chart appVersion if not provided
       pullPolicy: IfNotPresent
     port: 8080
