@@ -1,33 +1,25 @@
 # Provide a custom message
 message: "Msys Technologies Argo CD Demo project_Gopal_demo_v2"
-
 # Remember to set service.type=ClusterIP if you are using an ingress
 ingress:
   configured: false
   rewritePath: true
   pathPrefix: ""
-
 service:
   type: LoadBalancer
   port: 80
-
 deployment:
   replicaCount: 2
   container:
     image:
       repository: "267767410086.dkr.ecr.us-east-1.amazonaws.com/jenkins_pipeline"
-      tag: "latest" # uses chart appVersion if not provided
+      tag: "${env.BUILD_NUMBER}" # uses chart appVersion if not provided
       pullPolicy: Always
     port: 8080
-
   # Currently only linux images on amd64 architecture are supported - support for arm64 and windows/amd64 coming ...
   nodeSelector:
     kubernetes.io/os: linux
     kubernetes.io/arch: amd64
-
   resources: {}
-
   tolerations: []
-
   affinity: {}
-
